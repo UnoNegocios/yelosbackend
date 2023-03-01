@@ -27,6 +27,7 @@ class CalendarList
             AllowedFilter::exact('completed'),
             AllowedFilter::scope('date_between'),
             AllowedFilter::scope('created_between'),
+            AllowedFilter::scope('company.user_id'),
             AllowedFilter::exact('user_id'),
             AllowedFilter::exact('date'),
             AllowedFilter::exact('lead_id'),
