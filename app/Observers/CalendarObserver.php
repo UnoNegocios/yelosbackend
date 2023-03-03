@@ -15,7 +15,11 @@ class CalendarObserver
      */
     public function created(Calendar $calendar)
     {
+        if(!$calendar->company_id == null)
         $calendar->company->update(['activity_indicator' => $calendar->company->getActivityIndicator()]);
+        else{
+
+        }
     }
 
     /**
@@ -26,7 +30,10 @@ class CalendarObserver
      */
     public function updated(Calendar $calendar)
     {
+        if(!$calendar->company_id == null)
         $calendar->company->update(['activity_indicator' => $calendar->company->getActivityIndicator()]);
+        else{
+        }
     }
 
     /**
@@ -37,7 +44,11 @@ class CalendarObserver
      */
     public function deleted(Calendar $calendar)
     {
+        if(!$calendar->company_id == null)
+
         $calendar->company->update(['activity_indicator' => $calendar->company->getActivityIndicator()]);
+        else{
+        }
     }
 
     /**
